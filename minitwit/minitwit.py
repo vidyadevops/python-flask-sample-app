@@ -101,7 +101,7 @@ def before_request():
 def timeline():
     """Shows a users timeline or if no user is logged in it will
     redirect to the public timeline.  This timeline shows the user's
-    messages as well as all the messages of followed users.
+    messages as well as all the messages of users followed by them.
     """
     if not g.user:
         return redirect(url_for('public_timeline'))
